@@ -11,7 +11,7 @@ export default class Content extends Component {
     super(props);
     this.state = {
       selected: 'all',
-      tabs: [],
+      tabs: tabData,
       cards: cardData
     };
   }

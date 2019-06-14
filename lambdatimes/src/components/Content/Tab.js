@@ -5,16 +5,20 @@ import Tabs from './Tabs';
 
 
 const Tab = props => {
+  console.log('got to tab');
   if (props.tab === props.selectedTab) {
-
+    return (
+      <div className="tab active-tab">
+      </div>
+    )
   }
-  
+  else {
   /* Using your props, determine if the `tab` prop matches the `selectedTab` prop, 
       if they match, the className should be: 'tab active-tab', 
       if it is not it should just be 'tab'*/
   return (
     <div
-      className={'tab'}
+      className="tab"
       onClick={(event) => {props.selectTabHandler(event)
         /* Replace this dummy click handler function with your selectTabHandler function from props 
          you'll need to pass the `tab` in as an argument to this handler. */
@@ -22,7 +26,8 @@ const Tab = props => {
     >
       {props.tab.toUpperCase()}
     </div>
-  );
+    )
+  }
 };
 
 Tab.propTypes = {

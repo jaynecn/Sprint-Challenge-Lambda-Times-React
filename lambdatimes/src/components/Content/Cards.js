@@ -22,7 +22,7 @@ const Cards = props => {
 // Make sure you include prop types for all of your incoming props
 
 Card.propTypes = {
-  cards: PropTypes.array.isRequired,
+  cards: PropTypes.array
 }
 
 export default Cards;
