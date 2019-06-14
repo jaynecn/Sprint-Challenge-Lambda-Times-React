@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 
 const Cards = props => {
-  console.log('got to cards');
   return (
     <div key={Date.now()} className="cards-container">
       {props.cards.map(event => (

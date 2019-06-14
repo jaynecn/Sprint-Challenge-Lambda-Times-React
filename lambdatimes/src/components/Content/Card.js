@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 
 const Card = props => {
-  console.log('got to card');
   return (
     <div className="card">
       <div className="headline">{props.card.headline}</div>

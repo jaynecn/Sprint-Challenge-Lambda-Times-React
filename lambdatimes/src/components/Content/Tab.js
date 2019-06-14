@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 
 const Tab = props => {
-  console.log('got to tab')
   if (props.tab === props.selectedTab) {
     return (
       <div className="tab active-tab">

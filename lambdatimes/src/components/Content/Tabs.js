@@ -3,13 +3,12 @@ import Tab from './Tab';
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
-  console.log('got to tabs');
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {props.tabs.map(event => (
-          <div>
+          <div key={event.headline}>
             <Tab 
             selectTabHandler={props.selectTabHandler}
             selectedTab={props.selectedTab}
