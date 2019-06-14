@@ -13,7 +13,7 @@ const Tabs = props => {
             <Tab 
             selectTabHandler={props.selectTabHandler}
             selectedTab={props.selectedTab}
-            tab={props.tab}
+            tab={event}
             />
           </div>
 
@@ -27,6 +27,8 @@ const Tabs = props => {
 
 Tabs.propTypes = {
   tabs: PropTypes.array.isRequired,
+  selectedTab: PropTypes.string.isRequired,
+  selectTabHandler: PropTypes.func.isRequired
 }
 
 // Make sure to use PropTypes to validate your types!

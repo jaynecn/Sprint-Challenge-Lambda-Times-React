@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tabs from './Tabs';
+
 
 
 
 const Tab = props => {
-  console.log('got to tab');
+  console.log('got to tab')
   if (props.tab === props.selectedTab) {
     return (
       <div className="tab active-tab">
@@ -31,9 +31,8 @@ const Tab = props => {
 };
 
 Tab.propTypes = {
-  selectTabHandler: PropTypes.func,
-  toUpperCase: PropTypes.func,
-  tab: PropTypes.string,
+  selectTabHandler: PropTypes.func.isRequired,
+  tab: PropTypes.string.isRequired,
   selectedTab: PropTypes.string
 }
 // Make sure you include PropTypes on your props.

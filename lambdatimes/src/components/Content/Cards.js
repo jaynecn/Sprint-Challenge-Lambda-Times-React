@@ -9,7 +9,7 @@ const Cards = props => {
     <div key={Date.now()} className="cards-container">
       {props.cards.map(event => (
         <div>
-          <Card card={event.card}/>
+          <Card card={event}/>
         </div>
        ))
       /* Using the cards prop, map over the list creating a 
