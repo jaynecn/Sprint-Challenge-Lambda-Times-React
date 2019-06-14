@@ -5,10 +5,11 @@ import PropTypes from 'prop-types';
 
 const Cards = props => {
   return (
-    <div key={Date.now()} className="cards-container">
+    <div className="cards-container">
       {props.cards.map(event => (
         <div>
-          <Card card={event}/>
+          <Card 
+          card={event}/>
         </div>
        ))
       /* Using the cards prop, map over the list creating a 
