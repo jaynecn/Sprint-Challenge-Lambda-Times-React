@@ -3,14 +3,18 @@ import Tab from './Tab';
 import PropTypes from 'prop-types';
 
 const Tabs = props => {
+  console.log('got to tabs');
   return (
     <div className="tabs">
       <div className="topics">
         <span className="title">TRENDING TOPICS:</span>
         {props.tabs.map(event => (
           <div>
-            <Tab selectTabHandler={event.selectTabHandler}selectedTab={event.selectedTab}
-            tab={event.tab}/>
+            <Tab 
+            selectTabHandler={props.selectTabHandler}
+            selectedTab={props.selectedTab}
+            tab={props.tab}
+            />
           </div>
 
         ))

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const Card = props => {
+  console.log('got to card');
   return (
     <div className="card">
       <div className="headline">{props.headline}</div>
@@ -18,9 +19,9 @@ const Card = props => {
 
 // Make sure to include PropTypes.
 Card.propTypes = {
-  headline: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  headline: PropTypes.string,
+  img: PropTypes.string,
+  author: PropTypes.string,
 }
 
 export default Card;
