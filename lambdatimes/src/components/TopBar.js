@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const TopBar = () => {
   return (
-    <Top>
+    <div className="top-bar">
       <div className="container">
         <div className="container-left">
           <span>TOPICS</span><span>SEARCH</span>
@@ -18,19 +18,19 @@ const TopBar = () => {
           <span>LOG IN</span>
         </div>
       </div>
-    </Top>
+    </div>
   )
 }
 
-export const Top = styled.div`
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: none;
-flex-direction: row;
-position: fixed;
-height: 44px;
-background-color: #333;
-`;
+// const Top = styled.div({
+//   width: '100%',
+//   display: 'flex',
+//   justify-content: 'center',
+//   align-items: 'none',
+//   flex-direction: 'row',
+//   position: 'fixed',
+//   height: '44px',
+//   backgroundColor: '#333',
+// });
 
 export default TopBar;
