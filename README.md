@@ -29,9 +29,24 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+PropTypes are used as a way to specify what type of information should be going into certain parts of our code.  This can be a good way to help with debugging.  For example, you can specify that a certain line of code should have an array, a string, a number, a boolean, a symbol, etc.  You will get an automatic warning when the rules you set up are broken.
+
 - [ ] Describe a life-cycle event in React?
+This is the lifecycle for components in React.  There are three main phases, Mounting, Updating and Unmounting.
+
+In Mounting, constructor() initialises local state and bind event handler methods.  render() examines props and state and returns elements. render() does the same job every time its invoked, and it is invoked again later in the lifecycle.  componentDidMount() is invoked immediately after the component is mounted.  This is a good place to make an http request and it will be requested right when the app/component is loading.
+
+In Updating, render() is called again to bind with the state object.componentDidUpdate() is invoked immediately after any updates.  This is a good opportunity to operate on the DOM.
+
+In Unmounting, componentWillUnmount() is invoked just before the lifecycle of the component invocation ends.  This can be used for cleanups: removing event listeners, stop API calls, etc.
+
 - [ ] Explain the details of a Higher Order Component?
+Much like .map is a higher order array method, higher order components is a component which can receive other components are arguments.  They can take in functions or classes.  They can be used to return an anonymous class, set state, create counters etc.
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+You can style using the className within your component
+You can style by creating a const variable (camelCase) with details of your styling held as a string
+You can create a component using const (PascalCase) to create a class using backticks to specify styling details eg.  export const Button = styled.button`(styling)`;
+
 
 ## Project Setup
 
